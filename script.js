@@ -23,10 +23,17 @@ function add(e) {
     let text = document.createElement("textarea")
     let cores = ["#db96b9","#e4a8b9","#c8a8d5","#d2ccf2","#e4eeff"]
     let data = document.createElement("h1")
-    let date = new Date();
-    mes = date.getMonth() + 1
-    dia = date.getDay()
-    ano = date.getFullYear()
+    
+            let date = new Date();
+            mes = date.getMonth() + 1
+            dia = date.getDate()
+            if(dia < 10){
+                dia = "0"+dia
+            }
+            if(mes < 10){
+                mes = "0"+mes
+            }
+            ano = date.getFullYear()
 
     data.innerHTML = dia + "/" + mes + "/" + ano
 
